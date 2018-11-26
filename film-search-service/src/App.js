@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 /*import logo from './img/logo.svg';*/
 import './App.css';
 import CardMin from './Cards/CardMin';
+import axios from 'axios';
+
+const quantity = 3;
+axios.get(`http://localhost:3002/trend-films/${quantity}`)
+      .then(res => {
+          const films = res.data;
+          console.log('films = ');console.log(films);
+      });
 
 class App extends Component {
   render() {
