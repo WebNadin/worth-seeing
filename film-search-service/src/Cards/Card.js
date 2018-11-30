@@ -6,8 +6,8 @@ import axios from 'axios';
 
 
 class Card extends Component {
-    constructor(props) {
-        super(props);
+    constructor(card) {
+        super(card);
         this.state = {
             films: []
         }
@@ -17,9 +17,9 @@ class Card extends Component {
         const quantity = 2;
         axios.get(`http://localhost:3002/charts/most_popular_movies/rating/desc/${quantity}`)
             .then(res => {
-                let filmsList = res.data.map((film) => {
+                let filmsList = res.data.map((film, index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <img src={film.poster} alt=""/>
                             <p>{film.name}</p>
                             <p>{film.rating}</p>
