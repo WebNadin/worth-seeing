@@ -24,6 +24,7 @@ yarn-error.log*
 
 
 .idea
+.idea/modules.xml
 build/
 node_modules/
 
