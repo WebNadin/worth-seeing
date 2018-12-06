@@ -28,5 +28,6 @@ yarn-error.log*
 ../.idea/modules.xml
 build/
 node_modules/
+package-lock.json
 
 

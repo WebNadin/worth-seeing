@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-/*import logo from './img/logo.svg';*/
 import './App.css';
 import Card from './Cards/Card';
 
@@ -7,10 +6,17 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>Не знаешь, что посмотреть?</h1>
-                <p>У нас ты найдешь фильмы, которые заслуживают внимания.</p>
-                <p> Новинки и старое доброе кино согласно рейтингу imdb, а также наши собственные рекомендации.</p>
-                <Card />
+                <div className="nn_col nn_col_1">
+                    <h1>Не знаешь, что посмотреть?</h1>
+                    {/*<p>У нас ты найдешь фильмы, которые заслуживают внимания.</p>
+                     <p> Новинки и старое доброе кино согласно рейтингу imdb, а также наши собственные рекомендации.</p>
+                     */}
+                </div>
+                <div className="nn_container bg-test-5">
+
+                    <Card />
+
+                </div>
             </div>
         );
     }

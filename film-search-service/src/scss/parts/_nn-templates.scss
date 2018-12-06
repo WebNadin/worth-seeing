@@ -1,0 +1,50 @@
+.nn{
+  &_container{
+    min-width:320px;
+    margin:0 auto;
+    max-width:1200px;
+    transition:all .25s ease-in-out;
+  }
+  &_col{
+    display:flex;
+    &_1{
+      flex-flow:column;
+      align-items:center;
+    }
+    &_2{
+      justify-content:center;
+      &__item{
+        width:50%;
+        flex:auto;
+      }
+    }
+    &_3{
+      flex-flow:row wrap;
+      justify-content:space-between;
+      &__item{
+        width:25%;
+        flex:auto;
+      }
+    }
+    &_6{
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+      &__item{
+        width:15%;
+        flex:auto;
+      }
+    }
+  }
+}
+
+.nn_card{
+  display:flex;
+  flex-direction:column;
+  &__img{
+    overflow:hidden;
+    img {
+      width:100%;
+    }
+  }
+}
