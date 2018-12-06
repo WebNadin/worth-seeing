@@ -13,9 +13,7 @@ class App extends Component {
                      */}
                 </div>
                 <div className="nn_container bg-test-5">
-
                     <Card />
-
                 </div>
             </div>
         );

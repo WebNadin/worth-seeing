@@ -37,13 +37,15 @@
     }
   }
 }
-
 .nn_card{
   display:flex;
   flex-direction:column;
-  &__img{
+  &__img-block{
+    max-height:300px;
+    /*background:url(https://m.media-amazon.com/images/M/MV5BMjMzMzQ0NzI5Nl5BMl5BanBnXkFtZTgwNjc2NTY0NjM@._V1_QL50.jpg) no-repeat center center;*/
+    background-size:cover;
     overflow:hidden;
-    img {
+    img{
       width:100%;
     }
   }
