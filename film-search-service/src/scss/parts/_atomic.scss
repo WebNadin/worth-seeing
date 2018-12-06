@@ -1,0 +1,17 @@
+.bg-test{
+  &-1{
+    background-color:$bg-test-1;
+  }
+  &-2{
+    background-color:$bg-test-2;
+  }
+  &-3{
+    background-color:$bg-test-3;
+  }
+  &-4{
+    background-color:$bg-test-4;
+  }
+  &-5{
+    background-color:$bg-test-5;
+  }
+}
