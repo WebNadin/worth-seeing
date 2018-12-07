@@ -14,6 +14,9 @@ class App extends Component {
                 </div>
                 <div className="nn_container bg-test-5">
                     <Card />
+                    <div className="nn-load-more">
+                        Загрузить еще 20 фильмов
+                    </div>
                 </div>
             </div>
         );

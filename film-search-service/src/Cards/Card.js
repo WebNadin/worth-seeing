@@ -13,27 +13,27 @@ class Card extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const quantity = 11;
         axios.get(`http://localhost:3002/charts/most_popular_movies/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let posterStyle = {
-                        color: 'red',
-                        backgroundImage: `url(' + ${film.poster} + ')no-repeat center center`
-                    }
+                        /*color: 'white'*/
+                    };
                     return (
-                        <div  className="nn_col_6__item">
-                            <di key={index} className="nn_card">
-                                <div className="nn_card__img-block" style={posterStyle}>
-                                    <p >{film.name}</p>
-
+                        <div className="nn-col_4">
+                            <div className="nn-col_4__item">
+                                <div className="nn-card nn-card_dark bg-1">
+                                    <div key={index} className="nn-card__img-block" style={posterStyle}>
+                                    </div>
+                                    <div key={index} className="nn-card__title">{film.name}</div>
+                                    <div key={index} className="nn-card__rating">
+                                        <div>{film.rating}</div>
+                                    </div>
+                                    {/*<img className='test-height' src={film.poster} alt=""/>*/}
                                 </div>
-                                <div className="nn_card__rating">
-                                    <p >{film.rating}</p>
-                                </div>
-                                {/*<img class='' src={film.poster} alt=""/>*/}
-                            </di>
+                            </div>
                         </div>
                     )
                 });
@@ -44,7 +44,7 @@ class Card extends Component {
 
     render() {
         const {films} = this.state;
-        return <div className="nn_col nn_col_6">{films}</div>
+        return <div className="nn-col nn-col_6">{films}</div>
     }
 
 }
