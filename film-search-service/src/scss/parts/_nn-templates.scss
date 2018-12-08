@@ -28,10 +28,10 @@
   &_4{
     align-items:center;
     flex-flow:row wrap;
-    justify-content:space-between;
+    /*justify-content:space-between;*/
     padding:.3rem;
     &__item{
-      width:24.5%;
+      width:25%;
       /*flex-grow:1;*/
     }
 
@@ -43,10 +43,15 @@
   &_dark{
     color:white;
   }
+  &:hover{
+    background-color:#353535;
+    cursor:pointer;
+  }
   &__img-block{
     height:300px;
     background:url(https://m.media-amazon.com/images/M/MV5BMjMzMzQ0NzI5Nl5BMl5BanBnXkFtZTgwNjc2NTY0NjM@._V1_QL50.jpg) no-repeat center center;
     background-size:cover;
+    margin:.4rem;
     overflow:hidden;
     img{
       width:100%;
@@ -55,11 +60,11 @@
   }
   &__title{
     align-items:center;
-    background: linear-gradient(to bottom, rgba(17,17,17,1) 0%, rgba(46,46,46,1) 47%, rgba(34,34,34,1) 100%);
+    /*background:linear-gradient(to bottom, rgba(17, 17, 17, 1) 0%, rgba(46, 46, 46, 1) 47%, rgba(34, 34, 34, 1) 100%);*/
     display:flex;
     font-size:16px;
     justify-content:center;
-    height:60px;
+    padding: .3rem 0;
     text-align:center;
   }
   &__rating{
