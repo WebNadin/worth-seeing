@@ -22,17 +22,15 @@ class Card extends Component {
                         /*color: 'white'*/
                     };
                     return (
-                        <div className="nn-col_4">
-                            <div className="nn-col_4__item">
-                                <div className="nn-card nn-card_dark bg-1">
-                                    <div key={index} className="nn-card__img-block" style={posterStyle}>
-                                    </div>
-                                    <div key={index} className="nn-card__title">{film.name}</div>
-                                    <div key={index} className="nn-card__rating">
-                                        <div>{film.rating}</div>
-                                    </div>
-                                    {/*<img className='test-height' src={film.poster} alt=""/>*/}
+                        <div key={index} className="nn-col_4__item">
+                            <div className="nn-card nn-card_dark bg-2">
+                                <div className="nn-card__img-block" style={posterStyle}>
                                 </div>
+                                <div className="nn-card__title">{film.name}</div>
+                                <div className="nn-card__rating">
+                                    <div>{film.rating}</div>
+                                </div>
+                                {/*<img className='test-height' src={film.poster} alt=""/>*/}
                             </div>
                         </div>
                     )
@@ -44,7 +42,7 @@ class Card extends Component {
 
     render() {
         const {films} = this.state;
-        return <div className="nn-col nn-col_6">{films}</div>
+        return <div className="nn-col nn-col_4">{films}</div>
     }
 
 }

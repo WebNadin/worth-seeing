@@ -12,7 +12,7 @@ class App extends Component {
                      <p> Новинки и старое доброе кино согласно рейтингу imdb, а также наши собственные рекомендации.</p>
                      */}
                 </div>
-                <div className="nn_container bg-test-5">
+                <div className="nn-container bg-1">
                     <Card />
                     <div className="nn-load-more">
                         Загрузить еще 20 фильмов
