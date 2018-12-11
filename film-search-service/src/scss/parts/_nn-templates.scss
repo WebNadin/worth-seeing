@@ -48,9 +48,9 @@
     cursor:pointer;
   }
   &__img-block{
-    height:300px;
-    background:url(https://m.media-amazon.com/images/M/MV5BMjMzMzQ0NzI5Nl5BMl5BanBnXkFtZTgwNjc2NTY0NjM@._V1_QL50.jpg) no-repeat center center;
+    height:350px;
     background-size:cover;
+    background-position:center center;
     margin:.4rem;
     overflow:hidden;
     img{

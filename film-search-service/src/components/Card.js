@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import '../scss/main.scss';
 
-class Card extends Component {
+export class Card extends Component {
     constructor(card) {
         super(card);
         this.state = {
@@ -18,8 +18,9 @@ class Card extends Component {
         axios.get(`http://localhost:3002/charts/most_popular_movies/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
+                    let imgUrl = film.poster;
                     let posterStyle = {
-                        /*color: 'white'*/
+                        backgroundImage: 'url("' + imgUrl + '")'
                     };
                     return (
                         <div key={index} className="nn-col_4__item">
@@ -30,7 +31,7 @@ class Card extends Component {
                                 <div className="nn-card__rating">
                                     <div>{film.rating}</div>
                                 </div>
-                                {/*<img className='test-height' src={film.poster} alt=""/>*/}
+
                             </div>
                         </div>
                     )
