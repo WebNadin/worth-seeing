@@ -43,7 +43,7 @@ export class Card extends Component {
 
     render() {
         const {films} = this.state;
-        return <div className="nn-col nn-col_4">{films}</div>
+        return <div className="nn-col nn-col_4 bg-1">{films}</div>
     }
 
 }

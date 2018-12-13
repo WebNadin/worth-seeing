@@ -18,6 +18,8 @@
   }
 }
 
+
+
 /******* end_временные для тестирования *******/
 
 /******* фон *******/
@@ -25,15 +27,18 @@
 .bg-1{
   background-color:$bg-1;
 }
+.bg-1-opac{
+  background-color:$bg-1-opac;
+}
 .bg-2{
   background-color:$bg-2;
 }
 .bg-page{
-  background: url("../img/bg-page.png") no-repeat, #000 fixed;
-  background-size:100%;
-  background-position:center top;
+  background: #000 url("../img/bg-page.png") no-repeat fixed 0 0;
 }
 /******* end_фон *******/
 
-
+._w-100{
+  width:100%;
+}
 

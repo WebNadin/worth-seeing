@@ -9,8 +9,8 @@ class App extends Component {
     render() {
         return (
             <div className="App bg-page">
-                <Header />
-                <div className="nn-container bg-1">
+                <div className="nn-container">
+                    <Header />
                     <Card />
                     {/*<div className="nn-load-more">
                      Загрузить еще 20 фильмов
