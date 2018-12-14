@@ -11,10 +11,11 @@
     align-items:center;
   }
   &_2{
-    justify-content:center;
+    justify-content:space-between;
     &__item{
-      width:50%;
-      flex:auto;
+      align-self:center;
+      padding-right: 3rem;
+      width:40%;
     }
   }
   &_3{
@@ -64,7 +65,7 @@
     display:flex;
     font-size:16px;
     justify-content:center;
-    padding: .3rem 0;
+    padding:.3rem 0;
     text-align:center;
   }
   &__rating{
