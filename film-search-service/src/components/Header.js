@@ -9,18 +9,15 @@ const Header = (props) => {
     };
     return (
         <div className="header">
-            <div className="nn-col nn-col_2">
-                <div className="nn-col_2__item">
+            <div className="nn-logo-slogan">
+                <div className="nn-logo-slogan__item nn-logo-slogan__item_left">
                     <div className="logo">
                         <div className="logo__img">
-                            <img class='_w-100' src={logo} alt="logo"/>
-                        </div>
-                        <div className="logo__title">
-                            С душой и для души!
+                            <img className='_w-100' src={logo} alt="logo"/>
                         </div>
                     </div>
                 </div>
-                <div className="nn-col_2_item">
+                <div className="nn-logo-slogan__item">
                     <div className="slogan"></div>
                     <h1 className="slogan__title">{slogan.title}</h1>
                     <div className="slogan__text">
