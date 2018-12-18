@@ -1,0 +1,52 @@
+@media screen and (max-width:1260px) {
+  .slogan{
+    &__title{
+      font-size:1.1rem;
+    }
+  }
+}
+@media screen and (max-width:1200px) {
+  .nn-container{
+    padding:0 50px;
+  }
+}
+@media screen and (max-width:992px) {
+  .header{
+    padding:0;
+    margin-bottom:1rem;
+  }
+  .nn-logo-slogan{
+    justify-content:center;
+    &__item{
+      text-align:center;
+      width:100%;
+      &_left{
+        padding:1rem;
+        width:300px;
+      }
+    }
+  }
+}
+@media screen and (max-width:768px) {
+  .nn-logo-slogan{
+    &__item{
+      &_left{
+        padding:.5rem .5rem 1rem;
+        width:70%;
+      }
+    }
+  }
+  .slogan__title{
+    font-size:1.7rem;
+  }
+}
+@media screen and (max-width:550px) {
+  .nn-logo-slogan{
+    &__item{
+      &_left{
+        padding:.5rem .5rem 1rem;
+        width:100%;
+      }
+    }
+  }
+}

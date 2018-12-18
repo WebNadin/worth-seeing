@@ -1,4 +1,10 @@
 .header{
   padding-left: 3rem;
-  padding-bottom:1.5rem;
+  padding-right: 1rem;
+}
+
+.logo{
+  &__img{
+    /*padding:0 30px;*/
+  }
 }

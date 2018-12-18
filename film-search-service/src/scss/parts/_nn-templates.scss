@@ -2,6 +2,7 @@
   min-width:320px;
   margin:0 auto;
   max-width:1200px;
+  padding:0 60px;
   transition:all .25s ease-in-out;
 }
 .nn-col{
@@ -9,14 +10,6 @@
   &_1{
     flex-flow:column;
     align-items:center;
-  }
-  &_2{
-    justify-content:space-between;
-    &__item{
-      align-self:center;
-      padding-right: 3rem;
-      width:40%;
-    }
   }
   &_3{
     flex-flow:row wrap;
@@ -36,6 +29,18 @@
       /*flex-grow:1;*/
     }
 
+  }
+}
+.nn-logo-slogan{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  &__item{
+    align-self:center;
+    width:60%;
+    &_left{
+      width:35%;
+    }
   }
 }
 .nn-card{
