@@ -12,8 +12,10 @@
 }
 @media screen and (max-width:992px) {
   .header{
-    padding:0;
     margin-bottom:1rem;
+  }
+  .nn-col_4__item{
+    width:33%;
   }
   .nn-logo-slogan{
     justify-content:center;
@@ -26,8 +28,14 @@
       }
     }
   }
+  .slogan__title{
+    font-size:1.5rem;
+  }
 }
 @media screen and (max-width:768px) {
+  .nn-col_4__item{
+    width:50%;
+  }
   .nn-logo-slogan{
     &__item{
       &_left{
@@ -37,10 +45,13 @@
     }
   }
   .slogan__title{
-    font-size:1.7rem;
+    font-size:1.1rem;
   }
 }
 @media screen and (max-width:550px) {
+  .nn-col_4__item{
+    width:100%;
+  }
   .nn-logo-slogan{
     &__item{
       &_left{

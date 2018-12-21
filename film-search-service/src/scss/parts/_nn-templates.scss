@@ -22,13 +22,10 @@
   &_4{
     align-items:center;
     flex-flow:row wrap;
-    /*justify-content:space-between;*/
     padding:.3rem;
     &__item{
       width:25%;
-      /*flex-grow:1;*/
     }
-
   }
 }
 .nn-logo-slogan{
@@ -46,6 +43,7 @@
 .nn-card{
   display:flex;
   flex-direction:column;
+  height:100%;
   &_dark{
     color:white;
   }
