@@ -25,7 +25,7 @@ export class Card extends Component {
                         backgroundImage: 'url("' + imgUrl + '")'
                     };
                     let rating = Number(film.rating) * 10;
-                    let styleStarsGray = {
+                    let styleStars = {
                             position: 'absolute',
                             top: 0,
                             left: 0,
@@ -40,13 +40,12 @@ export class Card extends Component {
                                 </div>
                                 <div className="nn-card__title">{film.name}</div>
                                 <div className="nn-card__rating nn-rating">
-                                    <div className="nn-rating__item _relative">
-                                        <img class='' src={stars} alt="" className=""/>
-                                        <div className="stars_gray" style={styleStarsGray}>
-                                            <img class='' src={starsGray} alt="" className=""/>
+                                    <div className="_relative">
+                                        <img className='' src={starsGray} alt=""/>
+                                        <div className="stars_gray" style={styleStars}>
+                                            <img class='' src={stars} alt=""/>
                                         </div>
                                     </div>
-                                    <div className="nn-rating__item">{rating}</div>
                                 </div>
 
                             </div>
