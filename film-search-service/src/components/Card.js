@@ -40,12 +40,13 @@ export class Card extends Component {
                                 </div>
                                 <div className="nn-card__title">{film.name}</div>
                                 <div className="nn-card__rating nn-rating">
-                                    <div className="_relative">
+                                    <div className="nn-rating__item _relative">
                                         <img className='' src={starsGray} alt=""/>
                                         <div className="stars_gray" style={styleStars}>
                                             <img class='' src={stars} alt=""/>
                                         </div>
                                     </div>
+                                    <div className="nn-rating__item">{film.rating}</div>
                                 </div>
 
                             </div>

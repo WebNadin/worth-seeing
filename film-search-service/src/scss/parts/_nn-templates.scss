@@ -83,8 +83,12 @@
 }
 .nn-rating{
   display:flex;
-  justify-content:center;
+  flex-flow:row wrap;
+  justify-content:space-around;
   padding:0 .2rem;
+  &__item{
+    /*width:100%;*/
+  }
 }
 .nn-wr_stars{
   position:relative;
