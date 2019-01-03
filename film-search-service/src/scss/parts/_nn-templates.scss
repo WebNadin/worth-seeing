@@ -75,24 +75,18 @@
     padding:.3rem;
     text-align:center;
   }
-  &__rating{
+  /*&__rating{
     display:flex;
     justify-content:space-around;
     text-align:center;
-  }
+  }*/
 }
 .nn-rating{
-  &__stars{
-    width:250px;
-    height:26px;
-  }
-  &_gray{
-    position:absolute;
-    top:0;
-    left:0;
+  display:flex;
+  &__item{
+
   }
 }
-
 .nn-wr_stars{
   position:relative;
 }

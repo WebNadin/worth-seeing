@@ -25,33 +25,28 @@ export class Card extends Component {
                         backgroundImage: 'url("' + imgUrl + '")'
                     };
                     let rating = Number(film.rating) * 10;
-                    let ratingStyle = {
-                        background: `url(${stars}) no-repeat center`,
-                        backgroundSize: 'contain'
-                    };
-                    let ratingStyleGray = {
-                        background: `url(${starsGray}) no-repeat center`,
-                        backgroundSize: 'contain',
-                        zIndex: 10,
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: {rating}
-                    };
+                    let styleStarsGray = {
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            zIndex: 10,
+                            overflow: 'hidden',
+                            width: `${rating}%`
+                        };
                     return (
                         <div key={index} className="nn-col_4__item">
                             <div className="nn-card nn-card_dark bg-2">
                                 <div className="nn-card__img-block" style={posterStyle}>
                                 </div>
                                 <div className="nn-card__title">{film.name}</div>
-                                <div className="nn-card__rating nn-rating" style={ratingStyle}>
-                                    <div className="nn-wr_stars">
-                                        <div className="nn-rating__stars"></div>
-                                        <div className="nn-rating__stars nn-rating__stars_gray" style={ratingStyleGray}></div>
+                                <div className="nn-card__rating nn-rating">
+                                    <div className="nn-rating__item _relative">
+                                        <img class='' src={stars} alt="" className=""/>
+                                        <div className="stars_gray" style={styleStarsGray}>
+                                            <img class='' src={starsGray} alt="" className=""/>
+                                        </div>
                                     </div>
-                                    {/*
-                                    <div className="nn-rating__number">{rating}</div>
-                                  */}
+                                    <div className="nn-rating__item">{rating}</div>
                                 </div>
 
                             </div>
