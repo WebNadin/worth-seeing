@@ -72,12 +72,29 @@
     font-size:16px;
     justify-content:center;
     min-height:45px;
-    padding:.3rem 0;
+    padding:.3rem;
     text-align:center;
   }
   &__rating{
+    display:flex;
+    justify-content:space-around;
     text-align:center;
   }
+}
+.nn-rating{
+  &__stars{
+    width:250px;
+    height:26px;
+  }
+  &_gray{
+    position:absolute;
+    top:0;
+    left:0;
+  }
+}
+
+.nn-wr_stars{
+  position:relative;
 }
 /******* tests *******/
 
