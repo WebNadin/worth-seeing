@@ -20,7 +20,7 @@
     }
   }
   &_4{
-    align-items:center;
+    align-items:stretch;
     flex-flow:row wrap;
     padding-bottom:.3rem;
     padding-right:.3rem;
@@ -44,6 +44,7 @@
 .nn-card{
   display:flex;
   flex-direction:column;
+  justify-content: space-between;
   height:100%;
   margin-left:.3rem;
   margin-top:.3rem;
@@ -67,11 +68,9 @@
   }
   &__title{
     align-items:center;
-    /*background:linear-gradient(to bottom, rgba(17, 17, 17, 1) 0%, rgba(46, 46, 46, 1) 47%, rgba(34, 34, 34, 1) 100%);*/
     display:flex;
     font-size:16px;
     justify-content:center;
-    min-height:45px;
     padding:.3rem;
     text-align:center;
   }
@@ -84,10 +83,10 @@
 .nn-rating{
   display:flex;
   flex-flow:row wrap;
-  justify-content:space-around;
+  justify-content: center;
   padding:0 .2rem;
-  &__item{
-    /*width:100%;*/
+  &__item span{
+    padding-left:5px;
   }
 }
 .nn-wr_stars{

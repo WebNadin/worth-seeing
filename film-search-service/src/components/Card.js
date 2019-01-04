@@ -46,7 +46,7 @@ export class Card extends Component {
                                             <img class='' src={stars} alt=""/>
                                         </div>
                                     </div>
-                                    <div className="nn-rating__item">{film.rating}</div>
+                                    <div className="nn-rating__item"><span>{film.rating}</span></div>
                                 </div>
 
                             </div>
