@@ -1,3 +1,13 @@
+@media screen and (min-width:1200px){
+    .nn-card__img-block{
+      height:420px;
+    }
+}
+@media screen and (min-width:1310px){
+    .nn-card__img-block{
+      height:400px;
+    }
+}
 @media screen and (max-width:1260px) {
   .slogan{
     &__title{

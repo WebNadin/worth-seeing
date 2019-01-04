@@ -45,9 +45,10 @@
 .nn-card{
   display:flex;
   flex-direction:column;
+  justify-content: space-between;
+  height:100%;
   margin-left:.3rem;
   margin-top:.3rem;
-  justify-content:space-between;
   &__item{
     width:100%;
   }
@@ -57,6 +58,17 @@
   &:hover{
     background-color:#353535;
     cursor:pointer;
+  }
+  &__img-block{
+    height:350px;
+    background-size:cover;
+    background-position:center center;
+    margin:.4rem;
+    overflow:hidden;
+    img{
+      width:100%;
+      height:100px;
+    }
   }
   &__title{
     align-items:center;
@@ -70,21 +82,14 @@
 .nn-rating{
   display:flex;
   flex-flow:row wrap;
-  justify-content:space-around;
-  padding:0.2rem;
+  justify-content: center;
+  padding:0 .2rem;
   &__item span{
     padding-left:5px;
-    padding-bottom:2px;
   }
 }
 .nn-wr_stars{
   position:relative;
-}
-.nn-img-block{
-  img{
-    width:100%;
-    /*height:373px;*/
-  }
 }
 /******* tests *******/
 
