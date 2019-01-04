@@ -21,6 +21,9 @@ export class Card extends Component {
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
+                    let posterStyle = {
+                        backgroundImage: 'url("' + imgUrl + '")'
+                    };
                     let rating = Number(film.rating) * 10;
                     let styleStars = {
                         position: 'absolute',
