@@ -21,34 +21,35 @@ export class Card extends Component {
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
-                    let posterStyle = {
-                        backgroundImage: 'url("' + imgUrl + '")'
-                    };
                     let rating = Number(film.rating) * 10;
                     let styleStars = {
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            zIndex: 10,
-                            overflow: 'hidden',
-                            width: `${rating}%`
-                        };
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        zIndex: 10,
+                        overflow: 'hidden',
+                        width: `${rating}%`
+                    };
                     return (
                         <div key={index} className="nn-col_4__item">
                             <div className="nn-card nn-card_dark bg-2">
-                                <div className="nn-card__img-block" style={posterStyle}>
-                                </div>
-                                <div className="nn-card__title">{film.name}</div>
-                                <div className="nn-card__rating nn-rating">
-                                    <div className="nn-rating__item _relative">
-                                        <img className='' src={starsGray} alt=""/>
-                                        <div className="stars_gray" style={styleStars}>
-                                            <img class='' src={stars} alt=""/>
-                                        </div>
+                                <div className="nn-card__item">
+                                    <div className="nn-img-block">
+                                        <img class='' src={imgUrl} alt="" className=""/>
                                     </div>
-                                    <div className="nn-rating__item">{film.rating}</div>
                                 </div>
-
+                                <div className="nn-card__item">
+                                    <div className="nn-card__title">{film.name}</div>
+                                    <div className="nn-card__rating nn-rating">
+                                        <div className="nn-rating__item _relative">
+                                            <img className='' src={starsGray} alt=""/>
+                                            <div className="stars_gray" style={styleStars}>
+                                                <img class='' src={stars} alt=""/>
+                                            </div>
+                                        </div>
+                                        <div className="nn-rating__item"><span>{film.rating}</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     )
