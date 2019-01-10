@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import './App.css';
 import Home from './components/Home';
 import Header from './components/Header';
-import Film from './components/Film';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+//import Film from './components/Film';
+//import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 //import Background from './img/bg-page.jpg';
 
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import Sidebar from './Sidebar';
-import SidebarLink from './SidebarLink';
 
 class Home extends Component {
 
@@ -20,7 +19,7 @@ class Home extends Component {
         return (
             <div className="home">
                 <p>Home.ChartType={this.state.chartType}</p>
-                <Card chartType={this.props.chartType}/>
+                <Card chartTypeCard={this.state.chartType}/>
                 <div className="sidebar">
                     <Sidebar updateChartType={this.updateChartType}/>
                     {/*
