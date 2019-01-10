@@ -10,10 +10,6 @@ const Charts = (props) => {
     return (
         <div className="charts">
             Charts
-            {/*
-            <Link to={'/'}>Home</Link>
-            <Link to={'/charts'}>Charts</Link>
-            */}
         </div>
     );
 };

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Home from './components/Home';
 import Header from './components/Header';
-import Charts from './components/Charts';
+import Film from './components/Film';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 //import Background from './img/bg-page.jpg';
 
@@ -17,7 +17,7 @@ class App extends Component {
                         <Header />
                         <Switch>
                             <Route exact path='/' component={Home}/>
-                            <Route exact path='/charts' component={Charts}/>
+                            <Route exact path='/film' component={Film}/>
                         </Switch>
                     </div>
                 </div>

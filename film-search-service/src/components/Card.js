@@ -16,8 +16,9 @@ export class Card extends Component {
     }
 
     componentDidMount() {
-        const quantity = 11;
-        axios.get(`http://localhost:3002/charts/most_popular_movies/rating/desc/${quantity}`)
+        const quantity = 2;
+        let chartType ='most_popular_movies';
+        axios.get(`http://localhost:3002/charts/${chartType}/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -40,7 +41,7 @@ export class Card extends Component {
                                 </div>
                                 <div className="nn-card__title">{film.name}</div>
                                 <div className="nn-card__rating nn-rating">
-                                    <div className="nn-rating__item _relative">
+                                    <div className="nn-rating__item _relative stars">
                                         <img className='' src={starsGray} alt=""/>
                                         <div className="stars_gray" style={styleStars}>
                                             <img class='' src={stars} alt=""/>
