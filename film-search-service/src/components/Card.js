@@ -9,17 +9,18 @@ import starsGray from '../img/stars-gray.png';
 
 export class Card extends Component {
 
-    constructor(card) {
-        super(card);
+    constructor(props) {
+        super(props);
         this.state = {
             films: [],
-            chartType0: 'most_popular_movies'
+            //chartTypeCards: this.state.chartType,
+            chartTypeCard: 'most_popular_tv'
         };
     }
-
     componentDidMount() {
         const quantity = 2;
-        axios.get(`http://localhost:3002/charts/${this.state.chartType0}/rating/desc/${quantity}`)
+        //console.log('this.state.chartType = ');console.log(this.state.chartType);
+        axios.get(`http://localhost:3002/charts/${this.state.chartTypeCard}/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -57,7 +58,12 @@ export class Card extends Component {
                 });
                 this.setState({films: filmsList});
             })
+    }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            color: nextProps.color
+        });
     }
 
     render() {

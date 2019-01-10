@@ -4,9 +4,13 @@ import Sidebar from './Sidebar';
 import SidebarLink from './SidebarLink';
 
 class Home extends Component {
-    state = {
-        chartType: 'most_popular_movies'
-    };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            chartType: 'most_popular_movies'
+        };
+    }
 
     updateChartType = (value) => {
         this.setState({chartType: value})
@@ -16,9 +20,9 @@ class Home extends Component {
         return (
             <div className="home">
                 <p>Home.ChartType={this.state.chartType}</p>
-                <Card />
+                <Card chartType={this.props.chartType}/>
                 <div className="sidebar">
-                    <Sidebar updateChartType={this.updateChartType} currentType = {this.props.chartType}/>
+                    <Sidebar updateChartType={this.updateChartType}/>
                     {/*
                      <SidebarLink chartName="Фильмы наши рекомендации" chartLinkId="most_popular_tv"/>
                      <SidebarLink chartName="Фильмы по рейтингу" chartLinkId="top_rated_movies"/>
