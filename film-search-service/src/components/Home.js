@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import Sidebar from './Sidebar';
 import SidebarLink from './SidebarLink';
 
 class Home extends Component {
-    //onCangeChart
+    state = {
+        chartType: 'most_popular_movies'
+    };
+
+    updateChartType = (value) => {
+        this.setState({chartType: value})
+    };
+
     render() {
         return (
             <div className="home">
+                <p>Home.ChartType={this.state.chartType}</p>
                 <Card />
-
                 <div className="sidebar">
-                    <SidebarLink chartName="Сериалы по количеству просмотров" chartLinkId="most_popular_tv"/>
-                    <SidebarLink chartName="Сериалы по рейтингу" chartLinkId="top_rated_tv"/>
-                    <SidebarLink chartName="Фильмы по количеству просмотров" chartLinkId="most_popular_movies"/>
-                    <SidebarLink chartName="Фильмы по рейтингу" chartLinkId="top_rated_movies"/>
+                    <Sidebar updateChartType={this.updateChartType} currentType = {this.props.chartType}/>
+                    {/*
+                     <SidebarLink chartName="Фильмы наши рекомендации" chartLinkId="most_popular_tv"/>
+                     <SidebarLink chartName="Фильмы по рейтингу" chartLinkId="top_rated_movies"/>
+                     <SidebarLink chartName="Фильмы по количеству просмотров" chartLinkId="most_popular_movies"/>
+                     <SidebarLink chartName="Сериалы по рейтингу" chartLinkId="top_rated_tv"/>
+                     <SidebarLink chartName="Сериалы по количеству просмотров" chartLinkId="most_popular_tv"/>
+                     */}
                 </div>
 
             </div>

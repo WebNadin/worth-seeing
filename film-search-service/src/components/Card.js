@@ -8,17 +8,18 @@ import stars from '../img/stars.png';
 import starsGray from '../img/stars-gray.png';
 
 export class Card extends Component {
+
     constructor(card) {
         super(card);
         this.state = {
-            films: []
-        }
+            films: [],
+            chartType0: 'most_popular_movies'
+        };
     }
 
     componentDidMount() {
         const quantity = 2;
-        let chartType ='most_popular_movies';
-        axios.get(`http://localhost:3002/charts/${chartType}/rating/desc/${quantity}`)
+        axios.get(`http://localhost:3002/charts/${this.state.chartType0}/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -44,7 +45,7 @@ export class Card extends Component {
                                     <div className="nn-rating__item _relative stars">
                                         <img className='' src={starsGray} alt=""/>
                                         <div className="stars_gray" style={styleStars}>
-                                            <img class='' src={stars} alt=""/>
+                                            <img className='' src={stars} alt=""/>
                                         </div>
                                     </div>
                                     <div className="nn-rating__item"><span>{film.rating}</span></div>
