@@ -6,7 +6,6 @@ import React from 'react';
 class Sidebar extends React.Component {
     state = {
         chartType: 'top_rated_movies',
-        chartTypeInitial: 'top_rated_movies',
         charts: [
             {
                 name: 'Фильмы по рейтингу',
