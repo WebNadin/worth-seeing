@@ -17,15 +17,10 @@ export class Card extends Component {
         };
     }
 
-    /*updateChartType = (value) => {
-     this.setState({chartType: value})
-     };*/
-
     getChart = () => {
-        console.log('this.state.chartType Did = ');
-        console.log(this.props.chartType);
         const quantity = 2;
-        axios.get(`http://localhost:3002/charts/${this.state.chartType}/rating/desc/${quantity}`)
+        let type = this.state.chartType;
+        axios.get(`http://localhost:3002/charts/${type}/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -70,19 +65,16 @@ export class Card extends Component {
     componentDidMount() {
         this.getChart();
         //this.getChart;
+        console.log('this.state.chartType Did = ');
+        console.log(this.props.chartType);
     }
 
     componentWillReceiveProps(nextProps) {
-        /*console.log('this.state.chartType = ');
-         console.log(this.state.chartType);
-         this.state.chartType = nextProps.chartType;*/
-        console.log('this.state.chartType recieve Props = ');
-        console.log(this.state.chartType);
-        this.setState({
-            chartType: nextProps.chartType
-        });
-        /*this.getChart();*/
-
+        let type = nextProps.chartType;
+        console.log('nextProps.chartType = ');
+        console.log(nextProps.chartType);
+        //this.getChart();
+        this.forceUpdate();
     }
 
 
