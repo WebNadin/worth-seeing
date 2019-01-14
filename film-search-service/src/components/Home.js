@@ -7,7 +7,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartType: 'top_rated_movies'
+            chartType: 'top_rated_tv'
         };
     }
 
@@ -19,8 +19,11 @@ class Home extends Component {
         return (
             <div className="home">
                 <p>Home.ChartType={this.state.chartType}</p>
+
                 <Card chartType={this.state.chartType}/>
+
                 <div className="sidebar">
+
                     <Sidebar updateChartType={this.updateChartType}/>
                     {/*
                      <SidebarLink chartName="Фильмы наши рекомендации" chartLinkId="most_popular_tv"/>
