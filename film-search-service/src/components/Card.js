@@ -21,11 +21,8 @@ export class Card extends Component {
 
     componentWillReceiveProps(nextProps) {
         const quantity = 5;
-        let test = nextProps.chartType;
-        console.log('test = ');
-        console.log(test);
 
-        axios.get(`http://localhost:3002/charts/${test}/rating/desc/${quantity}`)
+        axios.get(`http://localhost:3002/charts/${nextProps.chartType}/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
