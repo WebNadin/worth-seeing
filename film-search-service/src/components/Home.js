@@ -7,7 +7,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartType: 'top_rated_tv'
+            chartType: 'top_rated_movies'
         };
     }
 
