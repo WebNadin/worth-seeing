@@ -1,8 +1,29 @@
-.logo{
-  &__img{
-    /*padding:0 30px;*/
+.home{
+  display:flex;
+}
+.sidebar{
+  background:linear-gradient(to right, #222 0%, #111 50%, #222 100%);
+  padding: 1rem 1rem 0 2rem;
+  text-align:left;
+  width:30%;
+  &.opened{
+    display:block;
+  }
+  &__link{
+    display:block;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__burger{
+    display:none;
+    text-align: right;
+    padding-right: 10px;
   }
 }
-.stars_gray{
 
+.hidden{
+  display:none;
+}
+.shown{
+  display:block;
 }

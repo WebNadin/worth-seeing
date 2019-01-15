@@ -9,16 +9,13 @@ import Header from './components/Header';
 
 
 class App extends Component {
-    onChangeChartType(){
-
-    }
     render() {
         return (
 
             <div className="App bg-page">
                 <div className="nn-container">
                     <Header />
-                    <Home onChangeChartType={this.onChangeChartType}/>
+                    <Home/>
                 </div>
             </div>
         );

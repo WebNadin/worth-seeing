@@ -17,9 +17,6 @@
     background-color:$bg-test-5;
   }
 }
-
-
-
 /******* end_временные для тестирования *******/
 
 /******* фон *******/
@@ -34,15 +31,16 @@
   background-color:$bg-2;
 }
 .bg-page{
-  background: #000 url("../img/bg-page.png") no-repeat fixed top right;
+  background:#000 url("../img/bg-page.png") no-repeat fixed top right;
+}
+.bg-grad{
+  background:linear-gradient(to right, #222 0%, #111 50%, #222 100%);
 }
 /******* end_фон *******/
 
 ._relative{
   position:relative;
 }
-
-
 ._w-100{
   width:100%;
 }

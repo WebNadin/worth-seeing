@@ -19,8 +19,7 @@ export class Card extends Component {
     }
 
     getChart = () => {
-        const quantity = 2;
-        let type = this.state.chartType;
+        const quantity = 5;
         axios.get(`http://localhost:3002/charts/${this.state.chartType}/rating/desc/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
@@ -33,12 +32,11 @@ export class Card extends Component {
                         position: 'absolute',
                         top: 0,
                         left: 0,
-                        zIndex: 10,
                         overflow: 'hidden',
                         width: `${rating}%`
                     };
                     return (
-                        <div key={index} className="nn-col_4__item">
+                        <div key={index} className="nn-b_cards__item">
                             <div className="nn-card nn-card_dark bg-2">
                                 <div className="nn-card__img-block" style={posterStyle}>
                                 </div>
@@ -61,7 +59,7 @@ export class Card extends Component {
                     films: filmsList
                 });
             });
-    }
+    };
 
     componentDidMount() {
         this.getChart();
@@ -81,7 +79,7 @@ export class Card extends Component {
 
     render() {
         const {films} = this.state;
-        return <div className="nn-col nn-col_4 bg-1">{films}</div>
+        return <div className="nn-b_cards bg-1">{films}</div>
     }
 
 }

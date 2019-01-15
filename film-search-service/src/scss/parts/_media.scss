@@ -13,5 +13,24 @@
   .App{
     padding-top:2rem;
   }
+  .sidebar{
+    /*background:transparent;*/
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    right:0;
+    width:100%;
+    &__burger{
+      display:block;
+    }
+    &__links{
+      display:none;
+      margin-bottom:2rem;
+    }
+    &__title{
+      display:none;
+    }
+  }
 }
 
