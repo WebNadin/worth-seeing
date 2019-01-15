@@ -14,7 +14,7 @@
     padding-top:2rem;
   }
   .sidebar{
-    /*background:transparent;*/
+    background:transparent;
     height:100%;
     position:fixed;
     text-align:center;
@@ -24,7 +24,7 @@
     &__burger{
       display:block;
     }
-    &__links{
+    &__link{
       display:none;
       margin-bottom:2rem;
     }
@@ -34,3 +34,8 @@
   }
 }
 
+@media screen and (max-width:768px) {
+  .sidebar{
+    padding:.3rem;
+  }
+}
