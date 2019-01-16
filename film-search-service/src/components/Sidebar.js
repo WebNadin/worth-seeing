@@ -37,6 +37,7 @@ class Sidebar extends React.Component {
     };
 
 
+
     render() {
         let chartsList = this.state.charts.map((chart, i)=> {
                 return (

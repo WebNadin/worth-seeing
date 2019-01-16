@@ -63,18 +63,25 @@ export class Card extends Component {
 
     componentDidMount() {
         this.getChart();
-        //this.getChart;
-        console.log('this.state.chartType Did = ');
+        console.log('this.state.chartType = ');
         console.log(this.props.chartType);
+        console.log('componentDidMount()');
     }
 
-    componentWillReceiveProps(nextProps) {
-        console.log('nextProps.chartType = ');
-        console.log(nextProps.chartType);
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("this.chartType =", this.chartType);
+        console.log('shouldComponentUpdate');
         this.chartType = nextProps.chartType;
-        console.log('this.chartType = ');console.log(this.chartType);
-        this.getChart(nextProps);
     }
+
+    /*componentWillReceiveProps(nextProps) {
+     console.log('nextProps.chartType = ');
+     console.log(nextProps.chartType);
+     this.chartType = nextProps.chartType;
+     console.log('this.chartType = ');
+     console.log(this.chartType);
+     this.getChart(nextProps);
+     }*/
 
 
     render() {
