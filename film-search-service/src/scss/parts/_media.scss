@@ -13,6 +13,11 @@
   .App{
     padding-top:2rem;
   }
+  .hidden{
+    .sidebar__b_links{
+      display:none;
+    }
+  }
   .sidebar{
     background:transparent;
     height:100%;
@@ -33,7 +38,6 @@
     }
   }
 }
-
 @media screen and (max-width:768px) {
   .sidebar{
     padding:.3rem;

@@ -8,7 +8,7 @@ class Sidebar extends React.Component {
         super(props);
         this.state = {
             chartType: 'top_rated_movies',
-            bg:  'bg-grad',
+            bg: 'bg-grad',
             isSidebarOpened: 'hidden',
             charts: [
                 {
@@ -32,9 +32,9 @@ class Sidebar extends React.Component {
     }
 
     toggleSidebar = () => {
-        let currentClass = this.state.isSidebarOpened
-        ;
-        console.log('currentClass = ');console.log(currentClass);
+        console.log('window.innerWidth = ');
+        console.log(window.innerWidth);
+        let currentClass = this.state.isSidebarOpened;
         if (currentClass === "shown") {
             this.setState({isSidebarOpened: "hidden"})
         } else {
