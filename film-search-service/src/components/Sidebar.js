@@ -32,14 +32,8 @@ class Sidebar extends React.Component {
     }
 
     toggleSidebar = () => {
-        console.log('window.innerWidth = ');
-        console.log(window.innerWidth);
-        let currentClass = this.state.isSidebarOpened;
-        if (currentClass === "shown") {
-            this.setState({isSidebarOpened: "hidden"})
-        } else {
-            this.setState({isSidebarOpened: "shown"});
-        }
+        let currentClass = (this.state.isSidebarOpened === "hidden") ? "shown" : "hidden";
+        this.setState({isSidebarOpened: currentClass});
     };
 
 
