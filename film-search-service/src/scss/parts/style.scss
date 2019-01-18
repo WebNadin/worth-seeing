@@ -1,5 +1,10 @@
+.header{
+  z-index:2;
+}
 .home{
   display:flex;
+  padding-bottom:.5rem;
+  padding-right:.5rem;
 }
 .b_links__item{
   display:block;
@@ -8,10 +13,12 @@
 }
 .sidebar{
   background:linear-gradient(to right, #222 0%, #111 50%, #222 100%);
+  margin-top:.5rem;
   padding:1rem 1rem 0 2rem;
   text-align:left;
   transition:all ease 1s;
   width:30%;
+  z-index:1;
   &__burger{
     display:none;
     text-align:right;
@@ -27,6 +34,7 @@
   &.sidebar{
     background:linear-gradient(to right, #222 0%, #111 50%, #222 100%);
     transition:all ease 1s;
+    z-index:10;
     .sidebar__b_links{
       display:block;
     }

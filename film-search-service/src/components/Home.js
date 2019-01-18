@@ -17,8 +17,10 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="home">
+            <div className="home bg-1">
+                {/*
                 <div>{this.state.chartType}</div>
+                */}
                 <Card chartType={this.state.chartType}/>
                 <Sidebar updateChartType={this.updateChartType}/>
             </div>

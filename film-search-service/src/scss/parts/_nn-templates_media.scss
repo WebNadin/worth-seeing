@@ -1,11 +1,11 @@
 @media screen and (min-width:1200px) {
   .nn-card__img-block{
-    height:420px;
+    height:270px;
   }
 }
 @media screen and (min-width:1310px) {
   .nn-card__img-block{
-    height:400px;
+    height:295px;
   }
 }
 @media screen and (max-width:1260px) {
@@ -19,10 +19,16 @@
   .nn-container{
     padding:0 50px;
   }
+  .nn-b_cards__item{
+    width:33%;
+  }
+  .nn-card__img-block{
+    height:300px;
+  }
 }
 @media screen and (max-width:992px) {
-  .header{
-    margin-bottom:1rem;
+  .nn-b_cards{
+    padding-right:0;
   }
   .nn-logo-slogan{
     justify-content:center;
@@ -40,8 +46,21 @@
   }
 }
 @media screen and (max-width:768px) {
-  .nn-col_4__item{
+  .nn-b_cards__item{
     width:50%;
+  }
+  .nn-card{
+    &__title{
+      align-items:center;
+      display:flex;
+      font-size:1.2rem;
+      justify-content:center;
+      padding:.3rem .3rem .7rem .3rem;
+      text-align:center;
+    }
+    &__img-block{
+      height:390px;
+    }
   }
   .nn-logo-slogan{
     &__item{
@@ -56,8 +75,11 @@
   }
 }
 @media screen and (max-width:550px) {
-  .nn-col_4__item{
+  .nn-b_cards__item{
     width:100%;
+  }
+  .nn-card__img-block{
+    height:460px;
   }
   .nn-logo-slogan{
     &__item{
