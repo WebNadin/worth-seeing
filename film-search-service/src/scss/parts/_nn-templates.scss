@@ -5,7 +5,6 @@
   padding:0 60px;
   transition:all .25s ease-in-out;
 }
-
 .nn-logo-slogan{
   display:flex;
   flex-flow:row wrap;
@@ -58,8 +57,9 @@
   display:flex;
   flex-flow:row wrap;
   justify-content:center;
+  margin-left:.5rem;
   min-height:35px;
-  padding:0 .2rem;
+  padding:0.2rem .2rem;
   &__item span{
     padding-right:5px;
   }
@@ -70,8 +70,8 @@
 .nn-b_cards{
   display:flex;
   flex-flow:row wrap;
-  padding-right: .5rem;
-  z-index: 2;
+  padding-right:.5rem;
+  z-index:2;
   &__item{
     background-color:$bg-1;
     box-sizing:border-box;
