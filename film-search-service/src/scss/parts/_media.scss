@@ -49,6 +49,9 @@
   .home{
     padding-right:0;
   }
+  .sidebar.hidden{
+    z-index:3;
+  }
 }
 @media screen and (max-width:768px) {
   .sidebar{
