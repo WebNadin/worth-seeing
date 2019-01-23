@@ -130,7 +130,8 @@ export class Card extends Component {
      }*/
 
     componentDidUpdate(filmsList) {
-
+        const quantity = 5;
+        axios.get(`http://localhost:3002/charts/${this.props.chartType}/rating/desc/${quantity}`);
     }
 
     render() {
