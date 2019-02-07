@@ -41,6 +41,11 @@
 }
 /******* end_фон *******/
 
+._long{
+  &-fantasy, &-sci-fi, &-biography, &-documentary{
+    width:25%;
+  }
+}
 ._relative{
   position:relative;
 }

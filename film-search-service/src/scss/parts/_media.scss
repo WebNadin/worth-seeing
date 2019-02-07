@@ -8,6 +8,14 @@
   .App{
     padding-top:5rem;
   }
+  ._long{
+    &-fantasy{
+      width:40%;
+    }
+    &-sci-fi, &-biography, &-documentary{
+      width:33%;
+    }
+  }
 }
 @media screen and (max-width:992px) {
   .App{
@@ -22,6 +30,12 @@
   .hidden{
     .sidebar__b_links{
       display:none;
+    }
+  }
+
+  ._long{
+    &-fantasy, &-sci-fi, &-biography, &-documentary{
+      width:50%;
     }
   }
   .sidebar{
@@ -55,6 +69,14 @@
 }
 @media screen and (max-width:768px) {
   .sidebar{
-    padding:.3rem;
+    padding:0;
+  }
+}
+
+@media screen and (max-width:540px){
+    ._long{
+    &-fantasy, &-sci-fi, &-biography, &-documentary{
+      width:100%;
+    }
   }
 }

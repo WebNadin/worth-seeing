@@ -1,11 +1,9 @@
 /**
  * Created by Nadin on 26.11.2018.
  */
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 import '../scss/main.scss';
-import stars from '../img/stars.png';
-import starsGray from '../img/stars-gray.png';
 
 const Filters = () => {
     let genres = [
@@ -99,9 +97,8 @@ const Filters = () => {
         }
     ];
     let genresList = genres.map((genre, i) => {
-        console.log('genres.length = ');console.log(genres.length);
-        if (i == genres.length - 1 || i == genres.length - 2 || i == genres.length - 3 ||i == genres.length - 4) {
-            var specialWidth =' nn-b_buttons__item_long';
+        if (i === genres.length - 1 || i === genres.length - 2 || i === genres.length - 3 ||i === genres.length - 4) {
+            var specialWidth =' _long-' + genre.id;
         }
         else var specialWidth ='';
 

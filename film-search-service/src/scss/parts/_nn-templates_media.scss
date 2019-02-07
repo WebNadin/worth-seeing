@@ -19,14 +19,23 @@
   .nn-container{
     padding:0 50px;
   }
+
+  .nn-b_buttons__item{
+    width:20%;
+  }
+
   .nn-b_cards__item{
     width:33%;
   }
+
   .nn-card__img-block{
     height:300px;
   }
 }
 @media screen and (max-width:992px) {
+  .nn-b_buttons__item{
+    width:25%;
+  }
   .nn-b_cards{
     padding-right:0;
   }
@@ -46,6 +55,9 @@
   }
 }
 @media screen and (max-width:768px) {
+  .nn-b_buttons__item{
+    width:33%;
+  }
   .nn-b_cards__item{
     width:50%;
   }
@@ -75,6 +87,9 @@
   }
 }
 @media screen and (max-width:550px) {
+  .nn-b_buttons__item{
+    width:50%;
+  }
   .nn-b_cards__item{
     width:100%;
   }
