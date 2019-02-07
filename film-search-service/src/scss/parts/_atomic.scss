@@ -36,6 +36,9 @@
 .bg-grad{
   background:linear-gradient(to right, #222 0%, #111 50%, #222 100%);
 }
+.bg-grad-vertical{
+  background:linear-gradient(to bottom, #222 0%, #111 50%, #222 100%);
+}
 /******* end_фон *******/
 
 ._relative{
@@ -44,10 +47,10 @@
 ._w-100{
   width:100%;
 }
-._w-40{
-  width:35%;
-}
 ._w-60{
   width:60%;
+}
+._w-40{
+  width:35%;
 }
 

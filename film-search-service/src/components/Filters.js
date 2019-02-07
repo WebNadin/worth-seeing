@@ -7,31 +7,15 @@ import '../scss/main.scss';
 import stars from '../img/stars.png';
 import starsGray from '../img/stars-gray.png';
 
-const Filters = (props) => {
+const Filters = () => {
     let genres = [
-        {
-            title: "биографический",
-            id: "biography"
-        },
         {
             title: "боевик",
             id: "action"
         },
         {
-            title: "вестерн",
-            id: "western"
-        },
-        {
-            title: "военный",
-            id: "war"
-        },
-        {
             title: "детектив",
             id: "crime"
-        },
-        {
-            title: "документальный",
-            id: "documentary"
         },
         {
             title: "драма",
@@ -54,12 +38,16 @@ const Filters = (props) => {
             id: "animation"
         },
         {
-            title: "мюзикл",
-            id: "musical"
+            title: "вестерн",
+            id: "western"
         },
         {
-            title: "научная фантастика",
-            id: "sci-fi"
+            title: "военный",
+            id: "war"
+        },
+        {
+            title: "мюзикл",
+            id: "musical"
         },
         {
             title: "нуар",
@@ -96,12 +84,31 @@ const Filters = (props) => {
         {
             title: "фантастика, фентези",
             id: "fantasy"
+        },
+        {
+            title: "научная фантастика",
+            id: "sci-fi"
+        },
+        {
+            title: "биографический",
+            id: "biography"
+        },
+        {
+            title: "документальный",
+            id: "documentary"
         }
     ];
-    let genresList = genres.map((genre, index) => {
+    let genresList = genres.map((genre, i) => {
+        console.log('genres.length = ');console.log(genres.length);
+        if (i == genres.length - 1 || i == genres.length - 2 || i == genres.length - 3 ||i == genres.length - 4) {
+            var specialWidth =' nn-b_buttons__item_long';
+        }
+        else var specialWidth ='';
+
         return (
-            <div className="nn-b_buttons__item">
-                <div key={index} className="nn-button bg-grad">
+
+            <div key={i} className={"nn-b_buttons__item" +(specialWidth)}>
+                <div className="nn-button">
                     <div className="nn-button__title">{genre.title}</div>
                 </div>
             </div>
