@@ -37,6 +37,9 @@
     &-fantasy, &-sci-fi, &-biography, &-documentary{
       width:50%;
     }
+    &-sci-fi, &-biography, &-documentary{
+      width:33%;
+    }
   }
   .sidebar{
     background:transparent;
@@ -68,13 +71,17 @@
   }
 }
 @media screen and (max-width:768px) {
+  ._long{
+    &-fantasy, &-sci-fi, &-biography, &-documentary{
+      width:50%;
+    }
+  }
   .sidebar{
     padding:0;
   }
 }
-
-@media screen and (max-width:540px){
-    ._long{
+@media screen and (max-width:540px) {
+  ._long{
     &-fantasy, &-sci-fi, &-biography, &-documentary{
       width:100%;
     }
