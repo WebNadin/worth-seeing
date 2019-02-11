@@ -16,7 +16,6 @@
   margin-top:.5rem;
   padding:1rem 1rem 0 2rem;
   text-align:left;
-  transition:all ease 1s;
   width:30%;
   z-index:1;
   &__burger{
@@ -33,10 +32,12 @@
 .shown{
   &.sidebar{
     background:linear-gradient(to right, #222 0%, #111 50%, #222 100%);
-    transition:all ease 1s;
+    height:100%;
+    width:100%;
     z-index:10;
     .sidebar__b_links{
       display:block;
+      margin-top: 2rem;
     }
     .sidebar__burger img{
       transform:rotate(90deg);

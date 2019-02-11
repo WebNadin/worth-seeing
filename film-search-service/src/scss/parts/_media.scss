@@ -19,7 +19,12 @@
 }
 @media screen and (max-width:992px) {
   .App{
-    padding-top:2rem;
+    padding-top:5rem;
+  }
+  .b_links__item{
+    line-height:2rem;
+    margin-bottom:2rem;
+    font-size:1.5rem;
   }
   .header{
     margin-bottom:1rem;
@@ -28,8 +33,11 @@
     position:relative;
   }
   .hidden{
-    .sidebar__b_links{
-      display:none;
+    &.sidebar{
+      height:0;
+      &__b_links{
+        display:none;
+      }
     }
   }
 
@@ -41,17 +49,34 @@
       width:33%;
     }
   }
+  .shown .sidebar{
+    &__burger{
+      background:transparent;
+    }
+    &__b_links{
+      height:auto;
+    }
+  }
+
   .sidebar{
     background:transparent;
     height:100%;
     margin-top:0;
+    padding:0;
     position:fixed;
     text-align:center;
     top:0;
     right:0;
     width:100%;
+    &__b_links{
+      height:0;
+      overflow:hidden;
+    }
     &__burger{
-      display:block;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      padding:.5rem;
     }
     &__link{
       display:none;
@@ -78,6 +103,10 @@
   }
   .sidebar{
     padding:0;
+  }
+  .sidebar__b_links{
+    padding-left:1rem;
+    padding-right:1rem;
   }
 }
 @media screen and (max-width:540px) {
