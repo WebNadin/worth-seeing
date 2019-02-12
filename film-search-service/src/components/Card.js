@@ -15,12 +15,11 @@ export class Card extends Component {
         this.state = {
             films: []
         };
-        getFilmsData = (event) => event;
         this.buildFilmsList = this.buildFilmsList.bind(this);
         this.getFilmsData = this.getFilmsData.bind(this);
     }
 
-    getFilmsData = () => {
+    getFilmsData() {
         const quantity = 2;
         console.log("getFilmsData()");
         console.log('quantity = ');
@@ -68,7 +67,7 @@ export class Card extends Component {
 
     };
 
-    buildFilmsList = (filmsList) => {
+    buildFilmsList(filmsList){
         console.log('buildFilmsList ()');
         this.setState({
             films: filmsList
@@ -77,8 +76,8 @@ export class Card extends Component {
 
     componentDidMount() {
         console.log("componentDidMount()");
-        getFilmsData();
-        buildFilmsList();
+        this.getFilmsData();
+        this.buildFilmsList();
     }
 
     /*shouldComponentUpdate(nextProps) {
