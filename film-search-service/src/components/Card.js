@@ -20,11 +20,15 @@ export class Card extends Component {
     }
 
     getFilmsData() {
-        const quantity = 2;
+        const quantity = 5;
         console.log("getFilmsData()");
         console.log('quantity = ');
         console.log(quantity);
-        axios.get(`http://localhost:3002/charts/${this.props.chartType}/rating/desc/${quantity}`)
+        let adressCharts = `charts/${this.props.chartType}/rating/desc/`;
+        let adressGenre = `charts/${this.props.genreType}/rating/desc/`;
+        let adress = adressCharts;
+        console.log('adress = ');console.log(adress);
+        axios.get(`http://localhost:3002/${adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -80,19 +84,10 @@ export class Card extends Component {
         this.buildFilmsList();
     }
 
-    /*shouldComponentUpdate(nextProps) {
-     console.log('shouldComponentUpdate()');
-     this.chartType = nextProps.chartType;
-     console.log("this.chartType after Update=");
-     console.log(this.chartType);
-     console.log("this.state.chartType =");
-     console.log(this.state.chartType);
-     return true;
-     }*/
-
-    componentDidUpdate(prevProps) {
+        componentDidUpdate(prevProps, adressCharts) {
         if (prevProps.chartType !== this.props.chartType) {
-            this.getFilmsData();
+            let adress = adressCharts;
+            this.getFilmsData(adress);
             this.buildFilmsList();
         }
     }

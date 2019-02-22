@@ -2,10 +2,11 @@
  * Created by Nadin on 26.11.2018.
  */
 import React from 'react';
-import axios from 'axios';
 import '../scss/main.scss';
 
 const Filters = () => {
+    this.genreType = 'action';
+
     let genres = [
         {
             title: "боевик",
@@ -96,15 +97,18 @@ const Filters = () => {
             id: "documentary"
         }
     ];
+
     let genresList = genres.map((genre, i) => {
+        let specialWidth ='';
         if (i === genres.length - 1 || i === genres.length - 2 || i === genres.length - 3 ||i === genres.length - 4) {
-            var specialWidth =' _long-' + genre.id;
+            specialWidth =' _long-' + genre.id;
         }
-        else var specialWidth ='';
 
         return (
 
-            <div key={i} className={"nn-b_buttons__item" +(specialWidth)}>
+            //<div key={i} className={"nn-b_buttons__item" +(specialWidth)}  onClick={() => {
+            // this.props.updateGenreType(genre.id)}}>
+            <div key={i} className={"nn-b_buttons__item" +(specialWidth)}  onClick={() => { this.updateGenreType(genre.id)}}>
                 <div className="nn-button">
                     <div className="nn-button__title">{genre.title}</div>
                 </div>

@@ -10,13 +10,24 @@ import Filters from './components/Filters';
 
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            genreType: 'action'
+        };
+    }
+
+    updateGenreType = (value) => {
+        this.setState({genreType: value})
+    };
+
     render() {
         return (
 
             <div className="App bg-page">
                 <div className="nn-container">
                     <Header />
-                    <Filters/>
+                    <Filters updateGenreType={this.updateGenreType}/>
                     <Home/>
                 </div>
             </div>

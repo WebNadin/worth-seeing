@@ -7,7 +7,8 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartType: 'top_rated_tv'
+            chartType: 'top_rated_tv',
+            genreType: 'action'
         };
     }
 
@@ -18,10 +19,8 @@ class Home extends Component {
     render() {
         return (
             <div className="home bg-1">
-                {/*
-                <div>{this.state.chartType}</div>
-                */}
-                <Card chartType={this.state.chartType}/>
+                <div>{this.state.genreType}</div>
+                <Card chartType={this.state.chartType} genreType={this.state.genreType}/>
                 <Sidebar updateChartType={this.updateChartType}/>
             </div>
         )
