@@ -27,7 +27,7 @@ class App extends Component {
             <div className="App bg-page">
                 <div className="nn-container">
                     <Header />
-                    <Filters updateGenreType={this.props.updateGenreType}/>
+                    <Filters updateGenreType={this.updateGenreType}/>
                     <Home/>
                 </div>
             </div>

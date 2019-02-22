@@ -105,18 +105,21 @@ class Filters extends React.Component {
 
     render() {
         let genresList = this.state.genres.map((genre, i) => {
-            console.log("genre.id =", genre.id);
-            let specialWidth = '';
             if (i === this.state.genres.length - 1 || i === this.state.genres.length - 2 || i === this.state.genres.length - 3 || i === this.state.genres.length - 4) {
-                specialWidth = ' _long-' + genre.id;
+                var specialWidth = ' _long-' + genre.id;
             }
+            else var specialWidth = '';
+
             return (
-                <div key={i} className="b_links__item" onClick={() => { this.props.updateChartType(chart.type)}}>{chart.name}</div>
+
+                <div key={i} className={"nn-b_buttons__item" +(specialWidth)}  onClick={() => { this.props.updateGenreType(genre.id)}}>
+                    <div className="nn-button">
+                        <div className="nn-button__title">{genre.title}</div>
+                    </div>
+                </div>
             )
         });
-        return (
-            <div className="nn-b_buttons">{genresList}</div>
-        )
+        return <div className="nn-b_buttons">{genresList}</div>;
     };
 
 }
