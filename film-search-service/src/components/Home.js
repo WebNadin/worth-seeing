@@ -8,12 +8,12 @@ class Home extends Component {
         super(props);
         this.state = {
             chartType: 'top_rated_tv',
-            genreType: 'action'
+            genreType: 'test1'
         };
     }
 
-    updateChartType = (value) => {
-        this.setState({chartType: value})
+    updateChartType = (chartValue) => {
+        this.setState({chartType: chartValue})
     };
 
     render() {

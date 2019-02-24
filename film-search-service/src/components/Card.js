@@ -22,12 +22,9 @@ export class Card extends Component {
     getFilmsData() {
         const quantity = 5;
         console.log("getFilmsData()");
-        console.log('quantity = ');
-        console.log(quantity);
         let adressCharts = `charts/${this.props.chartType}/rating/desc/`;
         let adressGenre = `charts/${this.props.genreType}/rating/desc/`;
         let adress = adressCharts;
-        console.log('adress = ');console.log(adress);
         axios.get(`http://localhost:3002/${adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
@@ -71,7 +68,7 @@ export class Card extends Component {
 
     };
 
-    buildFilmsList(filmsList){
+    buildFilmsList(filmsList) {
         console.log('buildFilmsList ()');
         this.setState({
             films: filmsList
@@ -84,7 +81,7 @@ export class Card extends Component {
         this.buildFilmsList();
     }
 
-        componentDidUpdate(prevProps, adressCharts) {
+    componentDidUpdate(prevProps, adressCharts) {
         if (prevProps.chartType !== this.props.chartType) {
             let adress = adressCharts;
             this.getFilmsData(adress);
