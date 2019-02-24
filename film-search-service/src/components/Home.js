@@ -7,14 +7,19 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            chartType: 'top_rated_tv',
-            genreType: 'test1'
+            chartType: 'top_rated_tv'
         };
     }
 
     updateChartType = (chartValue) => {
         this.setState({chartType: chartValue})
     };
+
+    updateGenreType = (value) => {
+        this.setState({genreType: value});
+        console.log('this.state.genreType = ');console.log(this.state.genreType);
+    };
+
 
     render() {
         return (

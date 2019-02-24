@@ -18,6 +18,7 @@ class App extends Component {
     }
 
     updateGenreType = (value) => {
+        console.log('this.state.genreType = ');console.log(this.state.genreType);
         this.setState({genreType: value})
     };
 
@@ -28,7 +29,7 @@ class App extends Component {
                 <div className="nn-container">
                     <Header />
                     <Filters updateGenreType={this.updateGenreType}/>
-                    <Home/>
+                    <Home genreType = {this.state.genreType}/>
                 </div>
             </div>
         );

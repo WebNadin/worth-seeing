@@ -11,7 +11,7 @@ export class Card extends Component {
 
     constructor(props) {
         super(props);
-        //this.chartType = "top_rated_tv";
+        this.genreType = "drama";
         this.state = {
             films: []
         };
@@ -23,8 +23,9 @@ export class Card extends Component {
         const quantity = 5;
         console.log("getFilmsData()");
         let adressCharts = `charts/${this.props.chartType}/rating/desc/`;
-        let adressGenre = `charts/${this.props.genreType}/rating/desc/`;
+        let adressGenre = `genre/${this.props.genreType}/`;
         let adress = adressCharts;
+        console.log("adressInitial =", adress);
         axios.get(`http://localhost:3002/${adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
@@ -82,11 +83,15 @@ export class Card extends Component {
     }
 
     componentDidUpdate(prevProps, adressCharts) {
+
         if (prevProps.chartType !== this.props.chartType) {
             let adress = adressCharts;
             this.getFilmsData(adress);
             this.buildFilmsList();
+            console.log("adressUpdateCharts =", adress);
         }
+        console.log("genreType =", this.props.genreType);
+
     }
 
     render() {
