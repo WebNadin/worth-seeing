@@ -16,17 +16,14 @@ export class Card extends Component {
             films: [],
             adress: `charts/${this.props.chartType}/rating/desc/`
         };
-        this.buildFilmsList = this.buildFilmsList.bind(this);
+        /*this.buildFilmsList = this.buildFilmsList.bind(this);*/
         this.getFilmsData = this.getFilmsData.bind(this);
     }
 
     getFilmsData() {
         const quantity = 5;
         console.log("getFilmsData()");
-        //let adressCharts = `charts/${this.props.chartType}/rating/desc/`;
-        //let adressGenre = `genre/${this.props.genreType}/`;
-        //let adress = adressCharts;
-        console.log("adressInitial =", this.state.adress);
+        console.log('${this.state.adressDid} = ');console.log(this.state.adress);
         axios.get(`http://localhost:3002/${this.state.adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
@@ -70,33 +67,38 @@ export class Card extends Component {
 
     };
 
-    buildFilmsList(filmsList) {
+    /*buildFilmsList(filmsList) {
         console.log('buildFilmsList ()');
         this.setState({
             films: filmsList
         });
-    };
+    };*/
 
     componentDidMount() {
         console.log("componentDidMount()");
         this.getFilmsData();
-        this.buildFilmsList();
+        /*this.buildFilmsList();*/
     }
 
-    componentDidUpdate(prevProps, adressCharts) {
-        console.log('this.props.genreType = ');console.log(this.props.genreType);
+    componentDidUpdate(prevProps) {
+        console.log('this.props.genreType = ');
+        console.log(this.props.genreType);
+        if (prevProps.genreType !== this.props.genreType) {
+            this.setState({
+                adress: `genre/${this.props.genreType}/`
+            });
+            console.log('${this.state.adressUpdateGenre} = ');console.log(this.state.adress);
+            this.getFilmsData();
+            /*this.buildFilmsList();*/
+        }
         if (prevProps.chartType !== this.props.chartType) {
             this.setState({
-            //address: `genre/${this.props.genreType}/
-            address: `genre/${this.genreType}`
-        });
-            //let adress = adressCharts;
+                adress: `charts/${this.props.chartType}/rating/desc/`
+            });
             this.getFilmsData();
-            this.buildFilmsList();
-            console.log("adressUpdateCharts =", this.state.adress);
+            /*this.buildFilmsList();*/
+            console.log('${this.state.adressUpdateChart} = ');console.log(this.state.adress);
         }
-        console.log("genreType =", this.props.genreType);
-
     }
 
     render() {
