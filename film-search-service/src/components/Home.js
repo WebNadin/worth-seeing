@@ -24,7 +24,8 @@ class Home extends Component {
     render() {
         return (
             <div className="home bg-1">
-                <Card chartType={this.state.chartType} genreType={this.state.genreType}/>
+                <div>{this.genreType}</div>
+                <Card chartType={this.state.chartType} genreType={this.props.genreType}/>
                 <Sidebar updateChartType={this.updateChartType}/>
             </div>
         )

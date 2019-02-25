@@ -13,7 +13,8 @@ export class Card extends Component {
         super(props);
         this.genreType = "drama";
         this.state = {
-            films: []
+            films: [],
+            adress: `charts/${this.props.chartType}/rating/desc/`
         };
         this.buildFilmsList = this.buildFilmsList.bind(this);
         this.getFilmsData = this.getFilmsData.bind(this);
@@ -22,11 +23,11 @@ export class Card extends Component {
     getFilmsData() {
         const quantity = 5;
         console.log("getFilmsData()");
-        let adressCharts = `charts/${this.props.chartType}/rating/desc/`;
-        let adressGenre = `genre/${this.props.genreType}/`;
-        let adress = adressCharts;
-        console.log("adressInitial =", adress);
-        axios.get(`http://localhost:3002/${adress}${quantity}`)
+        //let adressCharts = `charts/${this.props.chartType}/rating/desc/`;
+        //let adressGenre = `genre/${this.props.genreType}/`;
+        //let adress = adressCharts;
+        console.log("adressInitial =", this.state.adress);
+        axios.get(`http://localhost:3002/${this.state.adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -83,12 +84,16 @@ export class Card extends Component {
     }
 
     componentDidUpdate(prevProps, adressCharts) {
-
+        console.log('this.props.genreType = ');console.log(this.props.genreType);
         if (prevProps.chartType !== this.props.chartType) {
-            let adress = adressCharts;
-            this.getFilmsData(adress);
+            this.setState({
+            //address: `genre/${this.props.genreType}/
+            address: `genre/${this.genreType}`
+        });
+            //let adress = adressCharts;
+            this.getFilmsData();
             this.buildFilmsList();
-            console.log("adressUpdateCharts =", adress);
+            console.log("adressUpdateCharts =", this.state.adress);
         }
         console.log("genreType =", this.props.genreType);
 
