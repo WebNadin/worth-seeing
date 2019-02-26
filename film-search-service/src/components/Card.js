@@ -9,23 +9,24 @@ import starsGray from '../img/stars-gray.png';
 
 export class Card extends Component {
 
-    constructor(props) {
+    constructor(props, adress) {
         super(props);
         this.genreType = "drama";
+        this.adress = `charts/top_rated_movies/rating/desc/`;
         this.state = {
             films: [],
             genreType: "",
             adress: `charts/top_rated_movies/rating/desc/`
         };
-        this.buildFilmsList = this.buildFilmsList.bind(this);
+        this.buildFilmsList = this.buildFilmsList.bind(this, this.state.adress);
         this.getFilmsData = this.getFilmsData.bind(this);
     }
 
-    getFilmsData() {
+    getFilmsData(adress) {
         const quantity = 5;
-        console.log("getFilmsData()");
-        console.log("this.props.genreType =", this.props.genreType);
-        axios.get(`http://localhost:3002/genre/${this.props.genreType}/${quantity}`)
+        console.log('this.adress = ');
+        console.log(this.adress);
+        axios.get(`http://localhost:3002/${this.adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -82,24 +83,10 @@ export class Card extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log('prevProps.genreType = ');
-        console.log(prevProps.genreType);
         if (this.props.genreType !== prevProps.genreType) {
-            this.setState(() => ({
-                adress: `genre/${this.props.genreType}/`
-            }));
-            this.getFilmsData(this.props.genreType);
-            /*this.buildFilmsList();*/
+            this.adress = `genre/${this.props.genreType}/`;
+            this.getFilmsData();
         }
-        /*if (prevProps.chartType !== this.props.chartType) {
-            this.setState({
-                adress: `charts/${this.props.chartType}/rating/desc/`
-            });
-            this.getFilmsData(this.props.chartType);
-            this.buildFilmsList();
-            console.log('${this.state.adressUpdateChart} = ');
-            console.log(this.state.adress);
-        }*/
     }
 
     render() {

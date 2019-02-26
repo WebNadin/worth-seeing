@@ -105,10 +105,10 @@ class Filters extends React.Component {
 
     render() {
         let genresList = this.state.genres.map((genre, i) => {
+            var specialWidth = '';
             if (i === this.state.genres.length - 1 || i === this.state.genres.length - 2 || i === this.state.genres.length - 3 || i === this.state.genres.length - 4) {
-                var specialWidth = ' _long-' + genre.id;
+                specialWidth = ' _long-' + genre.id;
             }
-            else var specialWidth = '';
 
             return (
 
