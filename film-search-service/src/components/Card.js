@@ -14,17 +14,18 @@ export class Card extends Component {
         this.genreType = "drama";
         this.state = {
             films: [],
-            adress: `charts/${this.props.chartType}/rating/desc/`
+            genreType: "",
+            adress: `charts/top_rated_movies/rating/desc/`
         };
-        /*this.buildFilmsList = this.buildFilmsList.bind(this);*/
+        this.buildFilmsList = this.buildFilmsList.bind(this);
         this.getFilmsData = this.getFilmsData.bind(this);
     }
 
     getFilmsData() {
         const quantity = 5;
         console.log("getFilmsData()");
-        console.log('${this.state.adressDid} = ');console.log(this.state.adress);
-        axios.get(`http://localhost:3002/${this.state.adress}${quantity}`)
+        console.log("this.props.genreType =", this.props.genreType);
+        axios.get(`http://localhost:3002/genre/${this.props.genreType}/${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
@@ -67,12 +68,12 @@ export class Card extends Component {
 
     };
 
-    /*buildFilmsList(filmsList) {
+    buildFilmsList(filmsList) {
         console.log('buildFilmsList ()');
         this.setState({
             films: filmsList
         });
-    };*/
+    };
 
     componentDidMount() {
         console.log("componentDidMount()");
@@ -80,25 +81,25 @@ export class Card extends Component {
         /*this.buildFilmsList();*/
     }
 
-    componentDidUpdate(prevProps) {
-        console.log('this.props.genreType = ');
-        console.log(this.props.genreType);
-        if (prevProps.genreType !== this.props.genreType) {
-            this.setState({
+    componentDidUpdate(prevProps, prevState) {
+        console.log('prevProps.genreType = ');
+        console.log(prevProps.genreType);
+        if (this.props.genreType !== prevProps.genreType) {
+            this.setState(() => ({
                 adress: `genre/${this.props.genreType}/`
-            });
-            console.log('${this.state.adressUpdateGenre} = ');console.log(this.state.adress);
-            this.getFilmsData();
+            }));
+            this.getFilmsData(this.props.genreType);
             /*this.buildFilmsList();*/
         }
-        if (prevProps.chartType !== this.props.chartType) {
+        /*if (prevProps.chartType !== this.props.chartType) {
             this.setState({
                 adress: `charts/${this.props.chartType}/rating/desc/`
             });
-            this.getFilmsData();
-            /*this.buildFilmsList();*/
-            console.log('${this.state.adressUpdateChart} = ');console.log(this.state.adress);
-        }
+            this.getFilmsData(this.props.chartType);
+            this.buildFilmsList();
+            console.log('${this.state.adressUpdateChart} = ');
+            console.log(this.state.adress);
+        }*/
     }
 
     render() {
