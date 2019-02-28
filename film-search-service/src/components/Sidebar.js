@@ -54,7 +54,6 @@ class Sidebar extends React.Component {
                 >
                     <img src={burger} alt="logo"/>
                 </div>
-                <div className="sidebar__title"><h2>Подборки</h2></div>
                 <div className='sidebar__b_links'>{chartsList}</div>
             </div>
         )

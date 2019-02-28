@@ -23,7 +23,7 @@ export class Card extends Component {
     }
 
     getFilmsData(adress) {
-        const quantity = 5;
+        const quantity = 20;
         console.log('this.adress = ');
         console.log(this.adress);
         axios.get(`http://localhost:3002/${this.adress}${quantity}`)
@@ -42,7 +42,8 @@ export class Card extends Component {
                         width: `${rating}%`
                     };
                     return (
-                        <div key={index} className="nn-b_cards__item">
+                        <div key={index} className="nn-b_cards__item" onClick={() => { alert("Sorry. We still work" +
+                         " on this page...")}}>
                             <div className="nn-card nn-card_dark bg-2">
                                 <div className="nn-card__img-block" style={posterStyle}>
                                 </div>
@@ -82,9 +83,13 @@ export class Card extends Component {
         /*this.buildFilmsList();*/
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         if (this.props.genreType !== prevProps.genreType) {
             this.adress = `genre/${this.props.genreType}/`;
+            this.getFilmsData();
+        }
+        if (this.props.chartType !== prevProps.chartType) {
+            this.adress = `charts/${this.props.chartType}/rating/desc/`;
             this.getFilmsData();
         }
     }
