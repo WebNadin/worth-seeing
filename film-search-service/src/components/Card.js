@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../scss/main.scss';
+import '../scss/index.scss';
 import stars from '../img/stars.png';
 import starsGray from '../img/stars-gray.png';
 

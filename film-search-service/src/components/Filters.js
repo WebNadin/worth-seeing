@@ -2,7 +2,7 @@
  * Created by Nadin on 26.11.2018.
  */
 import React from 'react';
-import '../scss/main.scss';
+import '../scss/index.scss';
 
 class Filters extends React.Component {
 

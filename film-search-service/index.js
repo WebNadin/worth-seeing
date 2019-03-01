@@ -1,3 +1,5 @@
+import "./index.scss";
+
 var express = require('express');
 var imdb = require('imdb-scrapper');
 

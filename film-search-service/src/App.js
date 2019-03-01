@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
-import './App.css';
+import './scss/index.scss';
 import Home from './components/Home';
 import Header from './components/Header';
 import Filters from './components/Filters';
