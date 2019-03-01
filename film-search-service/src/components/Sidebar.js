@@ -41,23 +41,13 @@ class Sidebar extends React.Component {
             currentClass = "hidden";
             document.body.classList.toggle("_fixed");
         }
-        //let currentClass = (this.state.isSidebarOpened === "hidden") ? "shown" : "hidden";
         this.setState({isSidebarOpened: currentClass});
     };
-
-    /*componentDidMount(chartsList) {
-        let chartsList = this.state.charts.map((chart, i)=> {
-                return (
-                    <div key={i} className="b_links__item" onClick={() => { this.props.updateChartType(chart.type); this.toggleSidebar}}>{chart.name}</div>
-                )
-            }
-        );
-    };*/
 
     render() {
         let chartsList = this.state.charts.map((chart, i)=> {
                 return (
-                    <div key={i} className="b_links__item" onClick={this.toggleSidebar}>{chart.name}</div>
+                    <div key={i} className="b_links__item" onClick={() => { this.props.updateChartType(chart.type)}}>{chart.name}</div>
                 )
             }
         );
