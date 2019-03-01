@@ -18,14 +18,12 @@ export class Card extends Component {
             genreType: "",
             adress: `charts/top_rated_movies/rating/desc/`
         };
-        this.buildFilmsList = this.buildFilmsList.bind(this, this.state.adress);
+        //this.buildFilmsList = this.buildFilmsList.bind(this, this.state.adress);
         this.getFilmsData = this.getFilmsData.bind(this);
     }
 
     getFilmsData(adress) {
         const quantity = 20;
-        console.log('this.adress = ');
-        console.log(this.adress);
         axios.get(`http://localhost:3002/${this.adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
@@ -70,12 +68,12 @@ export class Card extends Component {
 
     };
 
-    buildFilmsList(filmsList) {
+    /*buildFilmsList(filmsList) {
         console.log('buildFilmsList ()');
         this.setState({
             films: filmsList
         });
-    };
+    };*/
 
     componentDidMount() {
         console.log("componentDidMount()");
