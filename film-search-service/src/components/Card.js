@@ -18,7 +18,6 @@ export class Card extends Component {
             genreType: "",
             adress: `charts/top_rated_movies/rating/desc/`
         };
-        //this.buildFilmsList = this.buildFilmsList.bind(this, this.state.adress);
         this.getFilmsData = this.getFilmsData.bind(this);
     }
 
@@ -68,25 +67,14 @@ export class Card extends Component {
 
     };
 
-    /*buildFilmsList(filmsList) {
-        console.log('buildFilmsList ()');
-        this.setState({
-            films: filmsList
-        });
-    };*/
-
     componentWillMount() {
         console.log("componentWillMount()");
         this.getFilmsData();
-        //document.getElementById("loaderPage").remove();
-        /*this.buildFilmsList();*/
     }
 
     componentDidMount() {
         console.log("componentDidMount()");
-        setTimeout(document.getElementById("loaderPage").remove(), 10000);
-        //document.getElementById("loaderPage").remove();
-        /*this.buildFilmsList();*/
+        //setTimeout(document.getElementById("loaderPage").remove(), 10000);
     }
 
     componentDidUpdate(prevProps) {
