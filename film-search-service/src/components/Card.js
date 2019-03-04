@@ -23,7 +23,7 @@ export class Card extends Component {
     }
 
     getFilmsData(adress) {
-        const quantity = 20;
+        const quantity = 30;
         axios.get(`http://localhost:3002/${this.adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
@@ -75,9 +75,17 @@ export class Card extends Component {
         });
     };*/
 
+    componentWillMount() {
+        console.log("componentWillMount()");
+        this.getFilmsData();
+        //document.getElementById("loaderPage").remove();
+        /*this.buildFilmsList();*/
+    }
+
     componentDidMount() {
         console.log("componentDidMount()");
-        this.getFilmsData();
+        setTimeout(document.getElementById("loaderPage").remove(), 10000);
+        //document.getElementById("loaderPage").remove();
         /*this.buildFilmsList();*/
     }
 
@@ -95,7 +103,9 @@ export class Card extends Component {
     render() {
         const {films} = this.state;
         console.log('render()');
-        return <div className="nn-b_cards bg-1">{films}</div>
+        return <div className="nn-b_cards bg-1">
+            {films}
+        </div>
     }
 
 }

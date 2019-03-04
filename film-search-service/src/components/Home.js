@@ -17,14 +17,14 @@ class Home extends Component {
 
     updateGenreType = (value) => {
         this.setState({genreType: value});
-        console.log('this.state.genreType = ');console.log(this.state.genreType);
+        console.log('this.state.genreType = ');
+        console.log(this.state.genreType);
     };
 
 
     render() {
         return (
             <div className="home bg-1">
-                <div>{this.genreType}</div>
                 <Card chartType={this.state.chartType} genreType={this.props.genreType}/>
                 <Sidebar updateChartType={this.updateChartType}/>
             </div>

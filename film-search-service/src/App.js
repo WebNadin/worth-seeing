@@ -7,6 +7,8 @@ import Filters from './components/Filters';
 //import Film from './components/Film';
 //import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 //import Background from './img/bg-page.jpg';
+//import LoadingPage from './img/loading-page.gif';
+//import LoadingPage from './img/burger.png';
 
 
 class App extends Component {
@@ -21,6 +23,7 @@ class App extends Component {
         console.log('this.state.genreType = ');console.log(this.state.genreType);
         this.setState({genreType: value})
     };
+
 
     render() {
         return (
