@@ -23,6 +23,9 @@ body{
   cursor:pointer;
   line-height:1rem;
   margin-bottom:1rem;
+  &:hover{
+    opacity:.7;
+  }
 }
 .loader{
   align-items:center;
