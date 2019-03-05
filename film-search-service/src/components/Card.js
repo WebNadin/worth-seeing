@@ -74,7 +74,6 @@ export class Card extends Component {
 
     componentDidMount() {
         console.log("componentDidMount()");
-        //setTimeout(document.getElementById("loaderPage").remove(), 10000);
     }
 
     componentDidUpdate(prevProps) {
