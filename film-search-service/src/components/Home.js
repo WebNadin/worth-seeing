@@ -21,7 +21,6 @@ class Home extends Component {
         console.log(this.state.genreType);
     };
 
-
     render() {
         return (
             <div className="home bg-1">
