@@ -1,7 +1,7 @@
 # Worth-seeing: the most popular films for your pleasure.
 
 ![Website working gif](https://drive.google.com/open?id=19XZFS9wIUS710ERku_L9wCMhbTbmuRA0)
-Most popular films service with using IMDB API, axios, React (, all the functionality ).
+
 This project works using API [IMDB](https://www.imdb.com/).
 
 Working version of website [here](http://worth-seeing.inf.ua/)
