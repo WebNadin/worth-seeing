@@ -1,6 +1,6 @@
 # Worth-seeing: the most popular films for your pleasure.
 
-![Website working gif](https://github.com/WebNadin/worth-seeing/film-search-service/readme-image.gif)
+![Website working gif](https://github.com/WebNadin/worth-seeing/raw/dev_readme/film-search-service/readme-image.gif)
 
 This project works using API [IMDB](https://www.imdb.com/).
 
