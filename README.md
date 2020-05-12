@@ -1,6 +1,7 @@
 # Worth-seeing: the most popular films for your pleasure.
 
-![Website working gif](https://i.ibb.co/yWrrHTS/worth-seeing-short.gif)
+![Website working gif](https://github.com/WebNadin/worth-seeing/film-search-service/blob/master/src/images/worth
+-seeing-short.gif)
 
 This project works using API [IMDB](https://www.imdb.com/).
 
