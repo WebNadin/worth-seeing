@@ -23,7 +23,7 @@ export class Card extends Component {
 
     getFilmsData(adress) {
         const quantity = 30;
-        axios.get(`http://localhost:3002/${this.adress}${quantity}`)
+        axios.get(`https://3000-dot-11454183-dot-devshell.appspot.com/${this.adress}${quantity}`)
             .then(res => {
                 let filmsList = res.data.map((film, index) => {
                     let imgUrl = film.poster;
