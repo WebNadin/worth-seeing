@@ -14,14 +14,14 @@ Working version of website [here](http://worth-seeing.inf.ua/)
  - styled-components
  - axios
 
- I created  design and markup by myself.
+ Design and markup was created by my own.
 
 
 ### Installation
 
 This page requires [Node.js](https://nodejs.org/) to run.
 
-First you need to run next [Node.js API](https://nodejs.org/):
+First you need to run next [Node.js API](https://github.com/PavelCreator/imdb-node-middleware-rest-api.git):
 - clone branch `master` with `git clone https://github.com/PavelCreator/imdb-node-middleware-rest-api.git`
  ```
 $ npm i
